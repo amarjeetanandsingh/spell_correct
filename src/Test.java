@@ -25,7 +25,7 @@ class Test{
 				totalTime += (System.currentTimeMillis()-startTime);
 				list.clear();
 				System.out.print("\r"+ counter++ + " of 36900");
-			}// wh 
+			}// wh
 		}catch(Exception e){
 			e.printStackTrace();
 		}
