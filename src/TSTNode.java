@@ -2,7 +2,7 @@ class TSTNode {
 	char data=' ';
 	boolean isEnd = false;	// end of a word.
 	TSTNode left=null, equal=null, right=null;
-	String frequency = "";
+	String frequency = null;
 
 	TSTNode (){}
 	
@@ -60,6 +60,7 @@ class TSTNode {
 			if(pos+1 < word.length()){
 				root.setEqual(insert(root.getEqual(), word, pos+1, frequency));
 			}else {
+				// we encountered an end of a word
 				root.setIsEnd(true);
 				root.setFrequency(frequency);
 			}

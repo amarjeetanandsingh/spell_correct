@@ -75,6 +75,8 @@ class Spell_Correct {
 			String words[] = null;
 			while ((line = br.readLine())!= null) {
 				words = line.split("\t");
+				// word[0] = actual word.
+				// word[1] = frequency of the word.
 				root = TSTNode.insert(root, words[0], 0, words[1]);
 			}
 			
