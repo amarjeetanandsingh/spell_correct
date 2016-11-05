@@ -8,5 +8,5 @@ It uses <b>Ternary Search Tree</b> data structure and <b>Levenshtein Distance</b
 <ul>
   <li>For the 36900 words listed <a href="">here</a>, it successfully suggests correct words with an average of 7.8 ms per wrong word.</li>
   <li>The algorith is proportional to the length of wrong word. But it hardly crosses 80 ms for long words like "knowledge..."</li>
-  <li>Firstly it takes about <b>200 ms</b> to create the Ternary Search Tree for the first time.  
+  <li>Initially it takes about <b>200 ms</b> to create the Ternary Search Tree for the first time.  
 </ul>
