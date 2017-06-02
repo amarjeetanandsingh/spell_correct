@@ -18,7 +18,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;

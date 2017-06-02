@@ -53,3 +53,4 @@ class PQElement implements Comparable<PQElement>{
         return element.getFrequency().compareTo(this.getFrequency());
     }   // compare;
 }
+
