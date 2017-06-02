@@ -3,13 +3,19 @@ import java.util.*;
 import java.sql.*;
 
 class Spell_Correct {
+<<<<<<< HEAD
 	private int EDIT_LIMIT = 3;
 	private int SUGGESTED_WORD_LIST_LIMIT = 10;
+=======
+	private final int EDIT_LIMIT = 3;
+	private final int SUGGESTED_WORD_LIST_LIMIT = 10;
+>>>>>>> f87cf52bd2bb4ad8fbc0a6d6d117fa1e1a936675
 	private static final String DICTIONARY_FILE_PATH = "word_list_freq.txt";
 	private String inputString ="";
 	private PriorityQueue<PQElement> suggestedWords = new PriorityQueue<PQElement>(10);
 	private static TSTNode root = null;
 	private long timeToSearch = 0;
+<<<<<<< HEAD
 	
 	static{
 		root = createTST(null); 		
@@ -25,18 +31,38 @@ class Spell_Correct {
 	}
 
 	public ArrayList<Word> correct(String str) throws IllegalArgumentException{
+=======
+	static{
+		root = createTST(null); 		
+	}
+	
+	public double getTimeToSearch(){
+		return timeToSearch/1000.0;
+	}
+	public List<String> correct(String str) throws IllegalArgumentException{
+>>>>>>> f87cf52bd2bb4ad8fbc0a6d6d117fa1e1a936675
 		if(str.equals("")){
 			throw new IllegalArgumentException("Input string is blank.");
 		}
 		inputString = str;
+<<<<<<< HEAD
 		ArrayList<Word> suggestedWordList = new ArrayList<Word>();
+=======
+		List<String> suggestedWordList = new ArrayList<String>();
+>>>>>>> f87cf52bd2bb4ad8fbc0a6d6d117fa1e1a936675
 		long startTime = System.nanoTime();
 		traverse(root, "");
 		timeToSearch = System.nanoTime()-startTime;
 
+<<<<<<< HEAD
 		for (int i=0; suggestedWords.isEmpty()== false; i++) {
 			PQElement element = suggestedWords.poll();
 			suggestedWordList.add(new Word(1+"", element.getWord(), element.getDistance()+""));
+=======
+		for (int i=0; suggestedWords.isEmpty()== false && i<SUGGESTED_WORD_LIST_LIMIT; i++) {
+			PQElement element = suggestedWords.poll();
+			suggestedWordList.add(element.getWord());
+>>>>>>> f87cf52bd2bb4ad8fbc0a6d6d117fa1e1a936675
 		}		
 		return suggestedWordList;
 	}

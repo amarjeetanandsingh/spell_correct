@@ -1,5 +1,9 @@
 class TSTNode {
+<<<<<<< HEAD
 	char data;
+=======
+	char data=' ';
+>>>>>>> f87cf52bd2bb4ad8fbc0a6d6d117fa1e1a936675
 	boolean isEnd = false;	// end of a word.
 	TSTNode left=null, equal=null, right=null;
 	String frequency = null;
