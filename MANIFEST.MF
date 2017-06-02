@@ -1,0 +1,4 @@
+Manifest-version: 1.0
+Class-Path: lib/
+Created-By: amarjeetanandsingh@gmail.com
+Main-Class: SpellCorrectMain
