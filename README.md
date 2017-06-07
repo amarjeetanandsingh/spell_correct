@@ -27,14 +27,14 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 <ul>
 <li>Download the project and open the root folder in terminal.</li>
 <li>Type ```java java -cp lib/ spell_correct.gui.SpellCorrectMain ``` and press enter.</li>
-<ul>
+</ul>
 
 <h5>CLI Version</h5>
 <ul>
 <li>Download root folder and open it in terminal.</li>
 <li>Type ```java java -cp lib/ spell_correct.Test ``` and press `enter`.</li>
 <li>Enter the english word you want to get the suggestion of.</li>
-<ul>
+</ul>
 
 <h2>API Details</h2>
 
