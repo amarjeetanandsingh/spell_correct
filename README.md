@@ -10,10 +10,10 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 <ul>
 <li>Create a Priority Queue with a comparator.</li>
 <li>Create a TST and insert all english <a href="http://norvig.com/google-books-common-words.txt">words</a> <em>(from <a href="http://norvig.com/mayzner.html">Norvig's post</a>)</em> along with their frequencies.</li>		
-<li>Start traversing the TST and for every word encountered in TST, calculate its Levenshtein Distance<b>LD</b> from input_word</li>
-<li>If LD <= 3 then put it in a Priority Queue.</li>	
+<li>Start traversing the TST and for every word encountered in TST, calculate its Levenshtein Distance<b>(LD)</b> from input_word</li>
+<li>If LD <= 3 then put it in a Priority Queue.</li>
 <li>At Last extract 10 words from the Priority Queue and display.</li>
-<ul>
+</ul>
 
 <h2>Performance </h2>
 <ul>
@@ -26,7 +26,11 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 <h5>GUI Version</h5>
 <ul>
 <li>Download the project and open the root folder in terminal.</li>
-<li>Type ```java java -cp lib/ spell_correct.gui.SpellCorrectMain ``` and press enter.</li>
+<li>Type 
+```java 
+	java -cp lib/ spell_correct.gui.SpellCorrectMain 
+```
+</li>
 </ul>
 
 <h5>CLI Version</h5>
@@ -39,22 +43,24 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 <h2>API Details</h2>
 
 ```java
-	public void setEditLimit(int);	
-```
+	public void setEditLimit(int);
 <ul>
 <li>You can set up to what edit limit you want to see the result. Min value is 0.</li>
-</ul>
+</ul>	
+```
+
 ```java
 	public void setSuggestedWordListLimit(int word_list_limit)
-```
 <ul>
 <li>You can set how many suggested words you want in output.</li>
 </ul>
+```
+
 ```java
 	public LinkedHashMap<String, Integer> correct(String str) throws IllegalArgumentException
-```
 <ul>
 <li>The actual method to correct a wrong word. It throws an IllegalArgumentException for blank or null String argument.</li></ul>
+```
 
 <h2>Sample Uses</h2>
 ```java
