@@ -1,12 +1,30 @@
 # Spell_Correct
-An english word spelling correction program
+<p>
+This is a program written in java to suggest a correct spelling against a wrongly spelled english word. 
+</p>
+<hr/>
 
-This is a program written java to suggest a correct spelling against a wrongly spelled word. 
+<h2>Overview</h2>
+<p>
+It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Search Tree</a><em>(TST)</em> data structure and <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</b> algorithm to suggest a <b>List</b> of 10 correct english words sorted by <b>Edit Distance</b> <em>(asc)</em><i>(default-max : <b>3</b>)</i> first and then by <b>frequency</b><em>(desc)</em> of that word in english language.
+</p>
+<hr/>
 
-It uses <b>Ternary Search Tree</b> data structure and <b>Levenshtein Distance</b> algorithm to return a <b>List</b> of 10 words sorted using <b>Edit Distance</b> <i>(max : <b>3</b>)</i> first and then by <b>frequency </b> of that word in english language.
+<h2>Algorithm</h2>
+<p>
+	<ul>
+		<li>Create a Priority Queue with a comparator.</li>
+		<li>Create a TST and insert all english <a href="http://norvig.com/google-books-common-words.txt">words</a> <em>(from <a href="http://norvig.com/mayzner.html">Norvig's post</a>)</em> along with their frequencies.</li>		
+		<li>Start traversing the TST and for every word encountered in TST, calculate its Levenshtein Distance<b>LD</b> from input_word</li>
+		<li>If LD <= 3 then put it in a Priority Queue.</li>	
+		<li>At Last extract 10 words from the Priority Queue and display.</li>
+	</ul>
+</p>
+<hr/>
+
 <h2>Performance </h2>
 <ul>
-  <li>For the 36900 words listed <a href="">here</a>, it successfully suggests correct words with an average of 7.8 ms per wrong word.</li>
-  <li>The algorith is proportional to the length of wrong word. But it hardly crosses 80 ms for long words like "knowledge..."</li>
-  <li>Initially it takes about <b>200 ms</b> to create the Ternary Search Tree for the first time.  
+  <li>Initially it takes about <b>450</b><em>ms</em> to create the Ternary Search Tree for 97565 words.</li> 
+  <li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst. on Pentium processor.</li>
+  <li>The algorith is proportional to the length of wrong word. But it hardly crosses 80 ms</li>
 </ul>

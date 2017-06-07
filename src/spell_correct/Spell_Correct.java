@@ -57,7 +57,8 @@ public class Spell_Correct {
 		traverse(tst.getRoot(), "");
 		
 		// adding 10 words to linkedHashMap to give as output.
-		LinkedHashMap<String, Integer> outputMap = new LinkedHashMap<>();
+		LinkedHashMap<String, Integer> 	outputMap = 
+										new LinkedHashMap<String, Integer>();
 		for (int i=0; suggestedWords.isEmpty()== false && i<SUGGESTED_WORD_LIST_LIMIT; i++) {
 			PQElement element = suggestedWords.poll();
 			outputMap.put(element.getWord(), element.getDistance());
