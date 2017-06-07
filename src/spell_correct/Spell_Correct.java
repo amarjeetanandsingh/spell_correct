@@ -16,7 +16,7 @@ public class Spell_Correct {
 
 	private int EDIT_LIMIT = 3;
 	private int SUGGESTED_WORD_LIST_LIMIT = 10;
-	private static final String WORD_LIST_FILE = "word_freq.txt";
+	private static final String WORD_LIST_FILE = "data/word_freq.txt";
 	private String inputString ="";
 	private PriorityQueue<PQElement> suggestedWords = new PriorityQueue<PQElement>(10);
 	private static TST tst = null;

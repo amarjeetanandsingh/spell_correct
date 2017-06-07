@@ -28,3 +28,33 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
   <li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst. on Pentium processor.</li>
   <li>The algorith is proportional to the length of wrong word. But it hardly crosses 80 ms</li>
 </ul>
+<hr/>
+
+<h2>How to use</h2>
+<h4>GUI Version</h4>
+<p>
+	<ul>
+		<li>Download `dist` folder and open it in terminal/command prompt.</li>
+		<li></li>
+	</ul>
+</p>
+<h4>CLI Version</h4>
+<p>
+	<ul>
+		<li>Download root folder and open it in terminal/command prompt.</li>
+		<li>Type ```java java -cp lib/ spell_correct.Test ``` and press `enter`.</li>
+		<li>Enter the english word you want to get the suggestion of.</li>
+	</ul>
+</p>
+<hr/>
+
+
+<h2>API Details</h2>
+<p>
+
+</p>
+<hr/>
+
+<h2>Minimum Requirment</h2>
+<ul>Java 1.5 or above.</ul>
+<hr/>
