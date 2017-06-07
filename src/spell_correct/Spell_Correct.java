@@ -50,7 +50,7 @@ public class Spell_Correct {
 	// key is the suggested word,
 	// value is its distance from input word.
 	public LinkedHashMap<String, Integer> correct(String str) throws IllegalArgumentException{
-		if(str.equals("")){
+		if(str == null || str.equals("")){
 			throw new IllegalArgumentException("Input string is blank.");
 		}
 		inputString = str;
