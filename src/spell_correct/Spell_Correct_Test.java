@@ -18,6 +18,7 @@ class Test{
 		long totalTime 	= 0;
 		
 		Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a word to correct : ");
 		String inputWord = sc.next();
 
 		// you can also set edit limit before fetching results as
