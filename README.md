@@ -40,6 +40,7 @@ Now enter the english word you want to get the suggestion of.
 
 
 <h2>API Details</h2>
+You can use the following methods of `Spell_Correct` class.
 <h5>1</h5>
 
 ```java
@@ -73,7 +74,8 @@ The method to correct a wrong word. It throws an `IllegalArgumentException` for 
 		spell_correct.setEditLimit(3); 
 		spell_correct.setSuggestedWordListLimit(10);
 		
-		LinkedHashMap <String, Integer> suggestedWordMap = spell_correct.correct("happyness");
+		LinkedHashMap <String, Integer> suggestedWordMap = 
+						spell_correct.correct("happyness");
 		System.out.println("Word\t\tDistance");
 		for (String word : suggestedWordMap.keySet()) {
 			System.out.println(word +"\t\t"+suggestedWordMap.get(word));
@@ -84,7 +86,7 @@ The method to correct a wrong word. It throws an `IllegalArgumentException` for 
 
 ```
 
-<h2>Minimum System Requirment</h2>
+<h2>Minimum Requirment</h2>
 <ul>
 <li>For <b>CLI</b> - Java 1.5</li>
 <li>For <b>GUI</b> - Java 1.8 and JavaFX 2.0</li>
