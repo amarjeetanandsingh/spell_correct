@@ -23,16 +23,16 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 </ul>
 
 <h2>How to use</h2>
-<h5>GUI Version</h5>
+<h4>GUI Version</h4>
 
 Download the project and open the root folder in terminal and type -
 
-```bash
+```
 	java -cp lib/ spell_correct.gui.SpellCorrectMain 
 ```
-<h5>CLI Version</h5>
+<h4>CLI Version</h4>
 Download the project and open the root folder in terminal and type -
-```bash 
+``` 
 	java -cp lib/ spell_correct.Test 
 ```
 Now enter the english word you want to get the suggestion of.
@@ -40,6 +40,7 @@ Now enter the english word you want to get the suggestion of.
 
 <h2>API Details</h2>
 <h5>1</h5>
+
 ```java
 	public void setEditLimit(int)
 ```
@@ -56,16 +57,19 @@ You can set how many suggested words you want in output.
 ```java
 	public LinkedHashMap<String, Integer> correct(String) throws IllegalArgumentException
 ```
-The method to correct a wrong word. It throws an `IllegalArgumentException` for blank or null String argument. It returns a LinkedHashMap<String, Integer> object where key(String) is the suggested correct word and its value is its edit distance from the wrong word. Also, the elements in map are arranged according to edit distance(asc) and then by the frequency of that word in english language(desc).
+The method to correct a wrong word. It throws an `IllegalArgumentException` for blank or null String argument. It returns a `LinkedHashMap<String, Integer>` object where key(String) is the suggested correct word and its value is its edit distance from the wrong word. Also, the elements in map are arranged according to edit distance(asc) and then by the frequency of that word in english language(desc).
 
 <h2>Sample Uses</h2>
 ```java
+
 	try{
 		Spell_Correct spell_correct =  new Spell_Correct();
-		spell_correct.setEditLimit(3); 			// it may be 1, 2, 3, 4....
-		spell_correct.setSuggestedWordListLimit(10);	// it may be 7, 8, 9, 10, 11...	
+		
+		//[optional]
+		spell_correct.setEditLimit(3); 
+		spell_correct.setSuggestedWordListLimit(10);
+		
 		LinkedHashMap <String, Integer> suggestedWordMap = spell_correct.correct("happyness");
-
 		System.out.println("Word\t\tDistance");
 		for (String word : suggestedWordMap.keySet()) {
 			System.out.println(word +"\t\t"+suggestedWordMap.get(word));
@@ -73,7 +77,9 @@ The method to correct a wrong word. It throws an `IllegalArgumentException` for 
 	}catch (IllegalArgumentException e){
 		e.printStackTrace();
 	}
+
 ```
+
 <h2>Minimum System Requirment</h2>
 <ul>
 <li>For <b>CLI</b> - Java 1.5</li>
