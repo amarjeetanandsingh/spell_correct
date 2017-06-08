@@ -4,7 +4,7 @@ This is a program written in java to suggest a correct spelling against a wrongl
 
 <h2>Overview</h2>
 
-It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Search Tree</a><em>(TST)</em> data structure and <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> algorithm to suggest a <b>List</b> of 10 correct english words sorted by <b>Edit Distance</b> <em>(asc)</em><i>(default-max : <b>3</b>)</i> first and then by <b>frequency</b><em>(desc)</em> of that word in english language.
+It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Search Tree </a><em>(TST)</em> data structure and <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> algorithm to suggest a <b>List</b> of 10 correct english words sorted by <b>Edit Distance</b> <em>(asc)</em> <i>(default-max : <b>3</b>)</i> first, and then by <b>frequency</b><em>(desc)</em> of that word in english language.
 
 <h2>Algorithm</h2>
 <ul>
@@ -18,49 +18,45 @@ It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Sear
 <h2>Performance </h2>
 <ul>
 <li>Initially it takes about <b>450</b><em> ms</em> to create the Ternary Search Tree for 97565 words.</li> 
-<li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst. on Pentium processor.</li>
+<li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst on Pentium processor.</li>
 <li>The algorithm is proportional to the length of wrong word. But it hardly crosses 80 ms.</li>
 </ul>
 
 <h2>How to use</h2>
 <h5>GUI Version</h5>
-<ul>
-<li>Download the project and open the root folder in terminal.</li>
-<li>Type 
-```java 
+
+Download the project and open the root folder in terminal and type -
+
+```bash
 	java -cp lib/ spell_correct.gui.SpellCorrectMain 
 ```
-</li>
-</ul>
-
 <h5>CLI Version</h5>
-<ul>
-<li>Download root folder and open it in terminal.</li>
-<li>Type ```java java -cp lib/ spell_correct.Test ``` and press `enter`.</li>
-<li>Enter the english word you want to get the suggestion of.</li>
-</ul>
+Download the project and open the root folder in terminal and type -
+```bash 
+	java -cp lib/ spell_correct.Test 
+```
+Now enter the english word you want to get the suggestion of.
+
 
 <h2>API Details</h2>
-
+<h5>1</h5>
 ```java
-	public void setEditLimit(int);
-<ul>
-<li>You can set up to what edit limit you want to see the result. Min value is 0.</li>
-</ul>	
+	public void setEditLimit(int)
 ```
+You can set up to what edit limit you want to see the result. Min value is 0, default is 3.
 
+<h5>2</h5>
 ```java
-	public void setSuggestedWordListLimit(int word_list_limit)
-<ul>
-<li>You can set how many suggested words you want in output.</li>
-</ul>
+	public void setSuggestedWordListLimit(int)
 ```
+You can set how many suggested words you want in output.
 
+
+<h5>3</h5>
 ```java
-	public LinkedHashMap<String, Integer> correct(String str) throws IllegalArgumentException
-<ul>
-<li>The actual method to correct a wrong word. It throws an IllegalArgumentException for blank or null String argument.</li></ul>
+	public LinkedHashMap<String, Integer> correct(String) throws IllegalArgumentException
 ```
+The method to correct a wrong word. It throws an `IllegalArgumentException` for blank or null String argument. It returns a LinkedHashMap<String, Integer> object where key(String) is the suggested correct word and its value is its edit distance from the wrong word. Also, the elements in map are arranged according to edit distance(asc) and then by the frequency of that word in english language(desc).
 
 <h2>Sample Uses</h2>
 ```java
