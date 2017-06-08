@@ -32,6 +32,7 @@ Download the project and open the root folder in terminal and type -
 ```
 <h4>CLI Version</h4>
 Download the project and open the root folder in terminal and type -
+
 ``` 
 	java -cp lib/ spell_correct.Test 
 ```
@@ -47,6 +48,7 @@ Now enter the english word you want to get the suggestion of.
 You can set up to what edit limit you want to see the result. Min value is 0, default is 3.
 
 <h5>2</h5>
+
 ```java
 	public void setSuggestedWordListLimit(int)
 ```
@@ -54,12 +56,14 @@ You can set how many suggested words you want in output.
 
 
 <h5>3</h5>
+
 ```java
 	public LinkedHashMap<String, Integer> correct(String) throws IllegalArgumentException
 ```
 The method to correct a wrong word. It throws an `IllegalArgumentException` for blank or null String argument. It returns a `LinkedHashMap<String, Integer>` object where key(String) is the suggested correct word and its value is its edit distance from the wrong word. Also, the elements in map are arranged according to edit distance(asc) and then by the frequency of that word in english language(desc).
 
 <h2>Sample Uses</h2>
+
 ```java
 
 	try{
