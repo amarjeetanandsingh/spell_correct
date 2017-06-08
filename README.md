@@ -40,7 +40,7 @@ Now enter the english word you want to get the suggestion of.
 
 
 <h2>API Details</h2>
-You can use the following methods of `Spell_Correct` class.
+You can use the following methods of  `Spell_Correct`  class.
 <h5>1</h5>
 
 ```java
