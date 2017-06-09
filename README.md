@@ -1,10 +1,10 @@
 # Spell_Correct
-This is a program written in java to suggest a correct spelling against a wrongly spelled english word. 
+Here is a java code to suggest related english words against incorrectly spelled word.
 
 
 <h2>Overview</h2>
 
-It uses <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Search Tree </a><em>(TST)</em> data structure and <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> algorithm to suggest a <b>List</b> of 10 correct english words sorted by <b>Edit Distance</b> <em>(asc)</em> <i>(default-max : <b>3</b>)</i> first, and then by <b>frequency</b><em>(desc)</em> of that word in english language.
+It implements <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternary Search Tree </a><em>(<b>TST</b>)</em> data structure and <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a>(<b>LD</b>) algorithm to suggest a list of 10 related english words sorted by <b>Edit Distance</b> <em>(asc)</em> <i>(default-max : <b>3</b>)</i> followed by <b>frequency</b><em>(desc)</em> of entered word in english language.
 
 <h2>Algorithm</h2>
 <ul>
