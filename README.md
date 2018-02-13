@@ -1,5 +1,5 @@
 # Spell_Correct
-Here is a java code to suggest related english words against incorrectly spelled word.
+Java code to suggest correct English words against incorrectly spelled word.
 
 
 <h2>Overview</h2>
@@ -18,29 +18,20 @@ It implements <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternar
 <h2>Performance </h2>
 <ul>
 <li>Initially it takes about <b>450</b><em> ms</em> to create the Ternary Search Tree for 97565 words.</li> 
-<li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst on Pentium processor.</li>
+<li>It suggests correct words with an average of <b>40-50</b> <em>ms</em> and <b>80</b> <em>ms</em> at worst.</li>
 <li>The algorithm is proportional to the length of wrong word. But it hardly crosses 80 ms.</li>
+<li>Tested on Pentium processor.</li>
 </ul>
 
 <h2>How to use</h2>
-<h4>GUI Version</h4>
+Download and run <a href="https://github.com/amarjeetanandsingh/spell_correct/blob/master/SpellCorrectApp/dist/SpellCorrectApp.jar">jar file</a>. If it doesn't run with double click, use following command.
 
-Download the project and open the root folder in terminal and type -
-
+```java
+	java -jar SpellCorrectApp.jar
 ```
-	java -cp lib/ spell_correct.gui.SpellCorrectMain 
-```
-<h4>CLI Version</h4>
-Download the project and open the root folder in terminal and type -
-
-``` 
-	java -cp lib/ spell_correct.Test 
-```
-Now enter the english word you want to get the suggestion of.
-
 
 <h2>API Details</h2>
-You can use the following methods of <b>Spell_Correct</b>  class.
+Download and add <a href = "">jar file</a> to your classpath. You can use the following methods of <b>SpellCorrector</b> class to get the list of suggested words.
 <h5>1</h5>
 
 ```java
@@ -67,27 +58,24 @@ The method to correct a wrong word. It throws an `IllegalArgumentException` for 
 
 ```java
 
-	try{
-		Spell_Correct spell_correct =  new Spell_Correct();
+try{
+  
+    SpellCorrector spellCorrector = new SpellCorrector();
+    spellCorrector.setEditLimit(3); //[optional]
+    spell_correct.setSuggestedWordListLimit(10); //[optional]
+	LinkedHashMap<String, Integer> wordList = wordList = spellCorrector.correct("happyness");
 		
-		//[optional]
-		spell_correct.setEditLimit(3); 
-		spell_correct.setSuggestedWordListLimit(10);
-		
-		LinkedHashMap <String, Integer> suggestedWordMap = 
-						spell_correct.correct("happyness");
-		System.out.println("Word\t\tDistance");
-		for (String word : suggestedWordMap.keySet()) {
-			System.out.println(word +"\t\t"+suggestedWordMap.get(word));
-		}
-	}catch (IllegalArgumentException e){
-		e.printStackTrace();
-	}
+    System.out.println("Word\t\tDistance");
+    for (String word : suggestedWordMap.keySet()) {
+    	System.out.println(word +"\t\t"+suggestedWordMap.get(word));
+    }
+}catch (IllegalArgumentException e){
+	e.printStackTrace();
+}
 
 ```
 
 <h2>Minimum Requirment</h2>
 <ul>
-<li>For <b>CLI</b> - Java 1.5</li>
-<li>For <b>GUI</b> - Java 1.8 and JavaFX 2.0</li>
+<li>Java 1.8+ and JavaFX 2.0+</li>
 </ul>
