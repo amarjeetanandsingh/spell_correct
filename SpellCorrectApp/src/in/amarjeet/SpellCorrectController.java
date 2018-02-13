@@ -1,64 +1,39 @@
-/**
- * Sample Skeleton for "simple.fxml" Controller Class
- * Use copy/paste to copy paste this code into your favorite IDE
- **/
+package in.amarjeet;
 
-package spell_correct.gui;
 
 import java.net.URL;
-
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javafx.geometry.Insets;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.application.Application;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
-import javafx.stage.Stage;
-
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;;
-
-import java.io.File;
-import java.io.IOException;
-import java.awt.Desktop;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 
-
-
-public class SpellCorrectGUIController implements Initializable {
-
-    @FXML
+public class SpellCorrectController implements Initializable {
+	@FXML
     private Button btnCorrect; // Value injected by FXMLLoader
     
     @FXML 
     private TextField txtInput;
 
     @FXML
-    private ComboBox comboEditDistance;
+    private ComboBox<String> comboEditDistance;
 
     @FXML
-    private TableView table;
+    private TableView<Word> table;
 
     @FXML
-    private TableColumn clmSrNo;
+    private TableColumn<Word, String> clmSrNo;
     
     @FXML
-    private TableColumn clmWord;
+    private TableColumn<Word, String> clmWord;
 
     @FXML
-    private TableColumn clmDistance;
+    private TableColumn<Word, String> clmDistance;
 
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
@@ -69,7 +44,6 @@ public class SpellCorrectGUIController implements Initializable {
         comboEditDistance.getItems().clear();
 		comboEditDistance.getItems().addAll("1", "2", "3", "4", "5");
 		comboEditDistance.getSelectionModel().select(2);
-  
 	}
 
     public Button getBtnCorrect() {
@@ -79,19 +53,20 @@ public class SpellCorrectGUIController implements Initializable {
     public TextField getTxtInput() {
     	return txtInput;
     }
-    public ComboBox getComboEditDistance(){
+    public ComboBox<String> getComboEditDistance(){
         return comboEditDistance;
     }    
-    public TableView getTable(){
+    public TableView<Word> getTable(){
         return table;
     }
-    public TableColumn getSrNo(){
+    public TableColumn<Word, String> getSrNo(){
         return clmSrNo;
     }
-    public TableColumn getWord(){
+    public TableColumn<Word, String> getWord(){
         return clmWord;
     }
-    public TableColumn getDistance(){
+
+	public TableColumn<Word, String> getDistance(){
         return clmDistance;
     }
 }

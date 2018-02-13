@@ -1,4 +1,4 @@
-package spell_correct.gui;
+package in.amarjeet;
 
 import javafx.beans.property.SimpleStringProperty;
 
