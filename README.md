@@ -24,14 +24,14 @@ It implements <a href="https://en.wikipedia.org/wiki/Ternary_search_tree">Ternar
 </ul>
 
 <h2>How to use</h2>
-Download and run <a href="https://github.com/amarjeetanandsingh/spell_correct/blob/master/SpellCorrectApp/dist/SpellCorrectApp.jar">jar file</a>. If it doesn't run with double click, use following command.
+Download and run <a href="https://github.com/amarjeetanandsingh/spell_correct/raw/master/SpellCorrectApp/dist/SpellCorrectApp.jar">jar file</a>. If it doesn't run with double click, use following command.
 
 ```java
 	java -jar SpellCorrectApp.jar
 ```
 
 <h2>API Details</h2>
-Download and add <a href = "">jar file</a> to your classpath. You can use the following methods of <b>SpellCorrector</b> class to get the list of suggested words.
+Download and add <a href = "https://github.com/amarjeetanandsingh/spell_correct/blob/master/spellcorrect/dist/spellcorrect.jar">jar file</a> to your classpath. You can use the following methods of <b>SpellCorrector</b> class to get the list of suggested words.
 <h5>1</h5>
 
 ```java
@@ -63,7 +63,7 @@ try{
     SpellCorrector spellCorrector = new SpellCorrector();
     spellCorrector.setEditLimit(3); //[optional]
     spell_correct.setSuggestedWordListLimit(10); //[optional]
-	LinkedHashMap<String, Integer> wordList = wordList = spellCorrector.correct("happyness");
+    LinkedHashMap<String, Integer> wordList = wordList = spellCorrector.correct("happyness");
 		
     System.out.println("Word\t\tDistance");
     for (String word : suggestedWordMap.keySet()) {
